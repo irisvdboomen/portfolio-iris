@@ -1,6 +1,6 @@
 function toggleMenu(){
     const menuToggle = document.querySelector('.toggle');
-    const sidebar = document.querySelector('.sidebar');
+    const navbar = document.querySelector('.navbar');
     menuToggle.classList.toggle('active')
-    sidebar.classList.toggle('active')
+    navbar.classList.toggle('active')
 }

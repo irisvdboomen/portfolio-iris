@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-
+    
 .toggle { /* toggle button */
     position: fixed;
     top: 30px;
@@ -18,60 +18,169 @@
     cursor: pointer;
     z-index: 1000; /*without z-index so high, some elements might block it, so the button won't work anymore */
 }
-
-.toggle.active {
+    
+.toggle.active { /*when clicking the toggle button, the class becomes active and changes the styling */
     background: #000 url(images/close1.png);
     background-size: 35px;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
+    
+section {
+    padding: 100px;
+    min-height: 100vh;
+}
+    
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+    
+.banner .img-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+    
+.banner .img-sidebar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.sidebar { /* actual menu  with text */
+.banner .content-box {
+    width: calc(100% - 500px);
+}
+
+.navbar {
+    width: 100%;
+}
+    
+.banner .content-box, .navbar {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px;
 }
-
-.sidebar {
+    
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 2.5em;
+    border-bottom: 4px solid black;
+    color: #000;
+    transition: 0.2s;
+}
+    
+.logo:hover {
+    transition: 0.2s;
+    border-bottom: none;
+    border-top: 4px solid black;
+}
+    
+.banner .content-box h4 {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 300;
+}
+    
+.banner .content-box p {
+    font-size: 1em;
+    color: #000;
+    font-weight: 300;
+}
+    
+.btn {
+    background: #fff;
+    color: #000;
+    padding: 10px 30px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+    
+.btn:hover {
+    background:#f4f7f7;
+}
+    
+.navbar {
     position: fixed;
     background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    padding: 40px;
     z-index: 100;
-    right: -100%; /* so the sidebar is not shown at first */
+    right: -100%; /* so the navbar is not shown at first, but appears when clicking the button */
 }
-
-.sidebar.active { /* with the active state, the menu will appear */
-    right: 0;
+    
+.navbar.active {
+    right: 0; /* show the menu */
 }
-
-.sidebar ul {
+    
+.navbar ul { 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-.sidebar ul li {
+    
+.navbar ul li {
     list-style: none;
 }
-
-.sidebar ul li a {
+    
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 2em;
     margin: 10px 0;
-    letter-spacing: 2px; 
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+    
+.navbar ul li a:hover {
+    color: #03989e;
+}
+    
+.social-media {
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.social-media img {
+    width: 30px; 
+}
+    
+.social-media li {
+    margin-right: 20px;
+    list-style: none;
+}
+    
+.social-media li img {
+    opacity: 0.7;
 }
 
-.sidebar ul li a:hover {
-    color: #03989e;
+.social-media li img:hover {
+    opacity: 1;
 }
