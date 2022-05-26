@@ -1,0 +1,77 @@
+* {
+    font-family: 'Signika', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle { /* toggle button */
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #fff url(images/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000; /*without z-index so high, some elements might block it, so the button won't work anymore */
+}
+
+.toggle.active {
+    background: #000 url(images/close1.png);
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.sidebar { /* actual menu  with text */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    position: fixed;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 100;
+    right: -100%; /* so the sidebar is not shown at first */
+}
+
+.sidebar.active { /* with the active state, the menu will appear */
+    right: 0;
+}
+
+.sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    margin: 10px 0;
+    letter-spacing: 2px; 
+}
+
+.sidebar ul li a:hover {
+    color: #03989e;
+}
