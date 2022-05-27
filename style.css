@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; /* instead of directly going to the next section, the pages scrolls */
 }
     
 .toggle { /* toggle button */
@@ -20,7 +21,7 @@
 }
     
 .toggle.active { /*when clicking the toggle button, the class becomes active and changes the styling */
-    background: #000 url(images/close1.png);
+    background: #00000000 url(images/close1.png);
     background-size: 35px;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,7 +76,7 @@ section {
 }
     
 .logo {
-    position: absolute;
+    position: fixed;
     top: 40px;
     left: 100px;
     font-size: 2.5em;
@@ -88,6 +89,11 @@ section {
     transition: 0.2s;
     border-bottom: none;
     border-top: 4px solid black;
+}
+
+.logo a {
+    color: #000;
+    text-decoration: none;
 }
     
 .banner .content-box h4 {
@@ -121,7 +127,7 @@ section {
     
 .navbar {
     position: fixed;
-    background: #000;
+    background: #000000cc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,4 +189,157 @@ section {
 
 .social-media li img:hover {
     opacity: 1;
+}
+
+/* About me */
+.about-me {
+    background: #fff;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.title h2 {
+    position: relative;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.title p {
+    max-width: 700px;
+    display: inline-block;
+}
+
+.about-me .about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-me .about .information {
+    min-width: 49%;
+    width: 49%;
+}
+
+.about-me .about .img-info {
+    margin-left: 40px;
+}
+
+.about-me .about .img-info img {
+    max-width: 70%;
+}
+
+/* projects */
+.work .about {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.work .about .projects {
+    position: relative;
+    background-color: #000;
+    width: 265px;
+    height: 265px;  
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.work .about .projects .img-project,
+.work .about .projects .text-project {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .about .projects .img-project img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work .about .projects .text-project {
+    background-color: #000;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work .about .projects:hover .text-project {
+    opacity: 0.6;
+}
+
+.work .about .projects .text-project h3 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+@media (max-width: 991px) {
+    .banner .img-sidebar {
+        display: none;
+    }
+
+    .banner .content-box, .navbar {
+        width: 100%;
+        pad: 40px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    .toggle {
+        right: 40px;
+    }
+
+    .social-media {
+        left: 40px
+    }
+
+    section {
+        padding: 40px;
+    }
+
+    .about-me .about {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .about-me .about .information {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .about-me .about .img-info {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5em;
+    } 
+}
+
+@media (max-width: 500px) {
+    .work .about .projects {
+        padding: 30px 20px;
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
 }
