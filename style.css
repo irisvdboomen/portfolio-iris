@@ -32,16 +32,25 @@ section {
     padding: 100px;
     min-height: 100vh;
 }
-    
+
+section#work.work,
+section#loyalties.loyalties {
+    background-color: #f4f7f7;
+}
+
 .banner,
-.saunakoning {
+.saunakoning,
+.loyalties,
+.jugo {
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
 
 .banner .img-sidebar,
-.saunakoning .img-sidebar-sk {
+.saunakoning .img-sidebar-sk,
+.loyalties .img-sidebar-lol,
+.jugo .img-sidebar-jugo {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +59,9 @@ section {
 }
     
 .banner .img-sidebar img,
-.saunakoning .img-sidebar-sk img {
+.saunakoning .img-sidebar-sk img,
+.loyalties .img-sidebar-lol img,
+.jugo .img-sidebar-jugo {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +72,9 @@ section {
 
 
 .banner .content-box,
-.saunakoning .content-box {
+.saunakoning .content-box,
+.loyalties .content-box,
+.jugo .content-box {
     width: calc(100% - 500px);
 }
 
@@ -70,7 +83,9 @@ section {
 }
     
 .banner .content-box, .navbar,
-.saunakoning .content-box, .navbar {
+.saunakoning .content-box,
+.loyalties .content-box,
+.jugo .content-box {
     position: absolute;
     top: 0;
     right: 0;
@@ -105,14 +120,18 @@ section {
 }
     
 .banner .content-box h4,
-.saunakoning .content-box h4 {
+.saunakoning .content-box h4,
+.loyalties .content-box h4,
+.jugo .content-box h4 {
     font-size: 1.5em;
     color: #000;
     font-weight: 300;
 }
     
 .banner .content-box p a,
-.saunakoning .content-box p a {
+.saunakoning .content-box p a,
+.loyalties .content-box p a,
+.jugo .content-box p a {
     font-size: 1em;
     color: #000;
     font-weight: 300;
@@ -133,6 +152,14 @@ section {
     
 .btn:hover {
     background:#f4f7f7;
+}
+
+.loyalties .btn {
+    background: #f4f7f7;
+}
+
+.loyalties .btn:hover {
+    background: #fff;
 }
     
 .navbar {
@@ -307,14 +334,18 @@ section {
 
 @media (max-width: 991px) {
     .banner .img-sidebar,
-    .saunakoning .img-sidebar-sk {
+    .saunakoning .img-sidebar-sk,
+    .loyalties .img-sidebar-lol,
+    .jugo .img-sidebar-jugo {
         display: none;
     }
 
     .banner .content-box, .navbar,
-    .saunakoning .content-box, .navbar {
+    .saunakoning .content-box, .navbar,
+    .loyalties .content-box, .navbar,
+    .jugo .content-box, .navbar {
         width: 100%;
-        pad: 40px;
+        padding: 40px;
     }
 
     .logo {
@@ -328,11 +359,11 @@ section {
     }
 
     .social-media {
-        left: 40px
+        left: 40px;
     }
 
     section {
-        padding: 40px;
+        margin-bottom: 60px;
     }
 
     .about-me .about {
