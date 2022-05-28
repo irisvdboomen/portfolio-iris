@@ -33,13 +33,15 @@ section {
     min-height: 100vh;
 }
     
-.banner {
+.banner,
+.saunakoning {
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
-    
-.banner .img-sidebar {
+
+.banner .img-sidebar,
+.saunakoning .img-sidebar-sk {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,7 +49,8 @@ section {
     height: 100%;
 }
     
-.banner .img-sidebar img {
+.banner .img-sidebar img,
+.saunakoning .img-sidebar-sk img {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +59,9 @@ section {
     object-fit: cover;
 }
 
-.banner .content-box {
+
+.banner .content-box,
+.saunakoning .content-box {
     width: calc(100% - 500px);
 }
 
@@ -64,7 +69,8 @@ section {
     width: 100%;
 }
     
-.banner .content-box, .navbar {
+.banner .content-box, .navbar,
+.saunakoning .content-box, .navbar {
     position: absolute;
     top: 0;
     right: 0;
@@ -82,6 +88,8 @@ section {
     font-size: 2.5em;
     border-bottom: 4px solid black;
     color: #000;
+    background-color: #fff;
+    padding: 0 8px;
     transition: 0.2s;
 }
     
@@ -96,13 +104,15 @@ section {
     text-decoration: none;
 }
     
-.banner .content-box h4 {
+.banner .content-box h4,
+.saunakoning .content-box h4 {
     font-size: 1.5em;
     color: #000;
     font-weight: 300;
 }
     
-.banner .content-box p {
+.banner .content-box p a,
+.saunakoning .content-box p a {
     font-size: 1em;
     color: #000;
     font-weight: 300;
@@ -247,6 +257,7 @@ section {
     margin: 10px;
     transition: 0.5s;
     text-align: center;
+    margin-top: 40px;
 }
 
 .work .about .projects .img-project,
@@ -268,7 +279,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} 
 
 .work .about .projects .text-project {
     background-color: #000;
@@ -285,12 +296,23 @@ section {
     font-size: 1.2em;
 }
 
+.work .about .projects .text-project a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title p {
+    margin-top: 20px;
+}
+
 @media (max-width: 991px) {
-    .banner .img-sidebar {
+    .banner .img-sidebar,
+    .saunakoning .img-sidebar-sk {
         display: none;
     }
 
-    .banner .content-box, .navbar {
+    .banner .content-box, .navbar,
+    .saunakoning .content-box, .navbar {
         width: 100%;
         pad: 40px;
     }
