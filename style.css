@@ -61,7 +61,7 @@ section#loyalties.loyalties {
 .banner .img-sidebar img,
 .saunakoning .img-sidebar-sk img,
 .loyalties .img-sidebar-lol img,
-.jugo .img-sidebar-jugo {
+.jugo .img-sidebar-jugo img {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,6 +97,7 @@ section#loyalties.loyalties {
 }
     
 .logo {
+    z-index: 1;
     position: fixed;
     top: 40px;
     left: 100px;
@@ -210,7 +211,7 @@ section#loyalties.loyalties {
     justify-content: center;
     align-items: center;
 }
-    
+
 .social-media img {
     width: 30px; 
 }
@@ -363,7 +364,7 @@ section#loyalties.loyalties {
     }
 
     section {
-        margin-bottom: 60px;
+        padding: 40px;
     }
 
     .about-me .about {
