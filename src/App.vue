@@ -1,16 +1,10 @@
 <template>
   <div class="home-page">
-    <nav class="nav-bar">
-      <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
+    <NavigationBar />
     <div class="introduction-home">
       <h1>Hello, I'm Iris van den Boomen</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt repudiandae non, vero atque similique recusandae ullam porro cupiditate pariatur minima nam suscipit dolores repellat placeat ducimus nisi architecto ut dolorem.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel harum repellat assumenda fuga, ea aliquid minima hic quidem nisi perferendis explicabo, rerum nostrum, vitae optio nam magnam porro. Vel laboriosam ratione modi! Dolorum cum aperiam qui unde odio sapiente voluptatem sed doloribus corrupti tempora non maxime iste, laboriosam, amet nostrum.</p>
     </div>
     <div class="projects-page">
       <h2 class="projects">My projects</h2>
@@ -44,14 +38,25 @@
     <div class="about-page">
       <h2 class="about">About</h2>
       <div class="profile-image"></div>
-      <div class="about-text">
+      <div class="about-introduction">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem provident fugit amet et rem asperiores ea assumenda accusantium blanditiis ipsam natus eligendi distinctio ratione eos quod labore, doloribus earum delectus?
+      </div>
+      <div class="about-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio earum dolorum labore placeat nisi fuga, veritatis consectetur! Explicabo ex praesentium, dolores laboriosam atque adipisci voluptatem vel consequatur omnis cum, nulla voluptatibus iusto architecto consectetur mollitia natus incidunt, provident harum illo ratione iure quas voluptate eveniet. Animi, accusamus? Totam, illo beatae!
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import NavigationBar from './components/NavigationBar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavigationBar
+  }
+}
 
 </script>
 
@@ -64,40 +69,16 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #F6FBFB;
 }
 
 @media only screen and (max-width: 744px) {
     /* Styles for tablets and small desktops */
   .home-page {
     background-image: url('./assets/white-flowers.jpg');
-    background-size: cover; /* Cover the entire size of the div */
-    background-position: center; /* Center the background image */
+    background-size: cover;
+    background-position: center; 
     height: 100vh;
-  }
-
-  .nav-bar {
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    background-color: #F6FBFB;
-  }
-
-  .hamburger {
-    position: absolute;
-    top: 50%;
-    right: 20px; 
-    transform: translateY(-50%);
-    width: 26px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-  }
-
-  .line1, .line2, .line3 {
-    width: 100%; 
-    border: 2px solid #000000;
-    border-radius: 4px;
   }
 
   .introduction-home {
@@ -111,7 +92,13 @@ body {
 
   .introduction-home h1 {
     margin-bottom: 80px;
-    margin-top: 100px;
+    margin-top: 150px;
+    font-size: 2rem;
+  }
+
+  .introduction-home p {
+    margin-top: 10px;
+    font-size: 1.375rem;
   }
 
   .projects {
@@ -159,16 +146,28 @@ body {
     align-items: center;
     flex-direction: column;
   }
+  
+  .about {
+    margin: 40px 0 10px 0;
+  }
 
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 136px;
+    height: 136px;
     background-color: grey;
-    border-radius: 60px;
+    border-radius: 70px;
+    margin: 20px 0;
+  }
+
+  .about-introduction {
+    width: 290px;
+    margin: 20px 0 0 0;
+    font-weight: bold
   }
 
   .about-text {
     width: 290px;
+    margin: 10px 0;
   }
 }
 
