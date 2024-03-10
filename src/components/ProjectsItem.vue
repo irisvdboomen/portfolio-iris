@@ -17,6 +17,14 @@ export default {
 </script>
 
 <style scoped>
+  .image-project {
+    width: 290px; 
+    height: 200px;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 20px 0 10px 0; 
+  }
+
 @media only screen and (max-width: 744px) {
   .project {
     display: flex;

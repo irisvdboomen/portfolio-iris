@@ -1,5 +1,5 @@
 <template>
-<div class="about-page">
+<div class="about-page" id="about">
     <h2 class="about">About</h2>
     <div class="profile-image"></div>
     <div class="about-introduction">
@@ -18,11 +18,20 @@ export default {
 </script>
 
 <style scoped>
+.about-page {
+    min-height: 100vh;
+    height: auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
 @media only screen and (max-width: 744px) {
 .about-page {
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
   }
   
   .about {
