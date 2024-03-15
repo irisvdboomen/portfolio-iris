@@ -39,10 +39,22 @@ body {
 
 @media only screen and (max-width: 744px) {
     /* Styles for tablets and small desktops */
-  .home-page {
+    .home-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('./assets/white-flowers.jpg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
+    opacity: 0.1; 
+    z-index: -1; 
+  }
+
+  .home-page {
+    position: relative; 
     height: 100vh;
   }
 

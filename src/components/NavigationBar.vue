@@ -6,9 +6,9 @@
         <li @click="scrollToSection('about')">About</li>
       </ul>
       <div class="hamburger" @click="toggleMenu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+        <div :class="['line', 'line1', { 'rotate45': menuOpen }]"></div>
+        <div :class="['line', 'line2', { 'hide': menuOpen }]"></div>
+        <div :class="['line', 'line3', { 'rotate-45': menuOpen }]"></div>
       </div>
     </nav>
 </template>
@@ -39,20 +39,20 @@ export default {
 
 <style scoped>
 .nav-bar {
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    background-color: #F6FBFB;
-    align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: #F6FBFB;
+  align-items: center;
 }
 
 .nav-item {
-    display: flex;
-    justify-content: end;
-    align-items: center; 
-    list-style: none;
-    padding: 0 60px;
-    height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center; 
+  list-style: none;
+  padding: 0 60px;
+  height: 100%;
 }
 
 .nav-item li {
@@ -61,50 +61,63 @@ export default {
 }
 
 @media only screen and (max-width: 744px) {
-    .nav-bar {
-        position: fixed;
-    }
+  .nav-bar {
+    position: fixed;
+  }
 
-    .nav-item {
-      display: flex;
-      justify-content: start;
-      position: fixed;
-      right: 0;
-      top: 0;
-      height: 100vh;
-      flex-direction: column;
-      background-color: #F6FBFB;
-      width: 60%;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
-    }
+  .nav-item {
+    display: flex;
+    justify-content: start;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #F6FBFB;
+    width: 60%;
+    margin-top: 60px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
 
-    .nav-item li {
-      padding: 20px;
-      margin-top: 20px;
-    }
+  .nav-item li {
+    padding: 20px;
+    /* margin-top: 20px; */
+  }
 
-    .nav-item.show {
-      transform: translateX(0);
-    }
+  .nav-item.show {
+    transform: translateX(0);
+  }
 
-    .hamburger {
-        position: absolute;
-        top: 50%;
-        right: 20px; 
-        transform: translateY(-50%);
-        width: 26px;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-    }
-    
-    .line1, .line2, .line3 {
-        width: 100%; 
-        height: 2px;
-        background-color: #000000;
-        border-radius: 4px;
-    }
+  .hamburger {
+    position: absolute;
+    top: 38%;
+    right: 20px; 
+    width: 26px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .line {
+      width: 100%; 
+      height: 1.6px;
+      background-color: #000000;
+      border-radius: 4px;
+  }
+
+  .rotate45 {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+
+  .rotate-45 {
+    transform: rotate(-45deg) translate(5px, -8px);
+  }
+
+  .hide {
+    display: none;
+  }
+
 }
 </style>

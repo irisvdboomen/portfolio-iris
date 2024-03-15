@@ -72,7 +72,7 @@ export default {
 
   .introduction-home p {
     margin-top: 10px;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 
   .introduction-text {
