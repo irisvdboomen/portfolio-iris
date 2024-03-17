@@ -57,10 +57,14 @@ export default {
 }
 
 .profile-image img {
-  background-color: grey;
-  border-radius: 50px;
-  width: 236px; 
-  height: 300px; 
+  /* background-color: grey; */
+  border-radius: 10px;
+  width: 200px; 
+  height: 320px;
+  object-fit: cover;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;  
 }
 
 .text-content {

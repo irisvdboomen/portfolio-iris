@@ -21,9 +21,9 @@ export default {
   data() {
     return {
         projects: [
-            { title: "Project 1", description: "Short description about the project", tags: ["Tag"], url: 'https://trendy-eindhoven-iris.streamlit.app/ '},
-            { title: "Project 2", description: "Short description about the project", tags: ["Tag"] },
-            { title: "Project 3", description: "Short description about the project", tags: ["Tag", "Data Visualization", "Data Visualization"] },
+            { title: "Trends in Eindhoven", description: "In my Advanced AI class, I worked on visualizing Eindhoven's trends, choosing my own topics for the project. I created several visualizations that highlight these trends. You can see the results by clicking on the image linked to the website.", tags: ["Data Visualization", "Python", "Streamlit"], url: 'https://trendy-eindhoven-iris.streamlit.app/ ', imageUrl: '/img/data-visualization.png'},
+            { title: "Project 2", description: "Short description about the project", tags: ["Vue", "React"], url: 'https://trendy-eindhoven-iris.streamlit.app/ ', imageUrl: '/img/data-visualization.png'},
+            { title: "Project 3", description: "Short description about the project", tags: ["Tag", "Data Visualization", "Data Visualization"], url: 'https://trendy-eindhoven-iris.streamlit.app/ ', imageUrl: '/img/data-visualization.png'},
         ]
     }
   }

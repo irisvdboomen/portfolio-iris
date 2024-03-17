@@ -71,7 +71,7 @@ export default {
     position: fixed;
     right: 0;
     top: 0;
-    height: 100vh;
+    height: 100dvh; /* dvh stands for dynamic viewport height */
     flex-direction: column;
     background-color: #F6FBFB;
     width: 60%;
@@ -101,10 +101,10 @@ export default {
   }
   
   .line {
-      width: 100%; 
-      height: 1.6px;
-      background-color: #000000;
-      border-radius: 4px;
+    width: 100%; 
+    height: 1.6px;
+    background-color: #000000;
+    border-radius: 4px;
   }
 
   .rotate45 {
