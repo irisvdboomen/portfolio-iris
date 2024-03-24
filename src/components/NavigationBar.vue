@@ -60,22 +60,26 @@ export default {
   cursor: pointer;
 }
 
+.nav-item li:hover {
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 744px) {
   .nav-bar {
     position: fixed;
+    z-index: 10;
   }
 
   .nav-item {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     position: fixed;
-    right: 0;
-    top: 0;
+    font-size: 1.5rem;
     height: 100dvh; /* dvh stands for dynamic viewport height */
     flex-direction: column;
-    background-color: #F6FBFB;
-    width: 60%;
-    margin-top: 60px;
+    background-color: #f6fbfbcf;
+    width: 100%;
+    /* margin-top: 60px; */
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }

@@ -42,6 +42,8 @@ export default {
     border-radius: 6px;
     margin-right: 6px;
     margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
   }
 
   .tag-Python {

@@ -1,18 +1,23 @@
 <template>
   <div class="about-page" id="about">
-    <h2 class="about">About me</h2>
+    <h2 class="about">About</h2>
     <div class="content-container">
       <div class="profile-image">
-      <img src="#" alt=""></div>
+      <img src="/img/me.jpeg" alt=""></div>
       <div class="text-content">
-        <div class="about-introduction">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id error dolor ipsam cumque optio, nobis beatae saepe ipsum, magni aliquam totam deserunt. Aliquam quo impedit earum facilis delectus animi!
+        <div class="about-text">
+          My name is Iris, and I am exploring the fields of Front-End Development and Artificial Intelligence as an ICT student. My education in ICT & Media Design has not only equipped me with a comprehensive understanding of essential web technologies like HTML, CSS, JavaScript, Vue, and React, but also enabled me to develop dynamic, intuitive, and accessible user interfaces. This solid foundation allows me to create engaging and user-friendly digital experiences.
         </div>
         <div class="about-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores alias voluptate animi quod ullam dolorem hic reiciendis cum aperiam consequuntur! Quibusdam nesciunt harum itaque modi ea veniam. Nam, accusantium nisi!
-          Dolor corrupti asperiores ratione laudantium, nemo pariatur culpa autem! Quidem, laudantium aliquam! Nam optio facilis incidunt perferendis quia error amet, hic nobis aliquid libero natus repellendus ullam numquam tempore animi?
-          Unde sapiente totam ex, placeat, qui consequatur eaque vitae doloremque autem accusamus corporis deleniti culpa tempore quaerat amet quo inventore, praesentium soluta repudiandae iste nemo! Est vitae voluptatem nam tempora!
-          Tempora, assumenda quam praesentium similique accusamus nisi atque molestias voluptatibus consectetur, voluptate laudantium nihil maiores blanditiis, omnis necessitatibus doloremque quasi velit sapiente labore! Assumenda fuga sint veniam eius. Laboriosam, fugit.
+          Besides my affinity for front-end design, I'm deeply interested by the analytical and predictive capabilities of AI, which is why I decided to specialize in AI within my studies. Here, I engage with Python, data visualization, deep learning, and other innovative tools to creatively tackle complex challenges. This unique blend of front-end development and AI fuels my ambition to develop solutions that are not just innovative but also focused on user needs.
+        </div>
+        <div class="about-text">
+          My ultimate goal is to blend the precision and capabilities of AI with the creative and user-centric approach of front-end design. I am committed to contributing to the creation of advanced, meaningful, and accessible technology, focusing on crafting user-focused solutions that address real-world challenges. As someone who is always eager to learn and grow, I look forward to expanding my knowledge and skills in ICT.
+        </div>
+          <div class="links">
+            <p class="mail"><a href="mailto:iris_v.d.boomen@hotmail.com"><img src="img/mail.png" alt=""></a></p>
+            <p><a href="https://www.linkedin.com/in/iris-van-den-boomen-391841162/" target="_blank"><img src="img/linkedin.png" alt=""></a></p>
+            <p><a href="https://github.com/irisvdboomen" target="_blank"><img src="img/github.png" alt=""></a></p>
         </div>
       </div>
     </div>
@@ -57,8 +62,7 @@ export default {
 }
 
 .profile-image img {
-  /* background-color: grey; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   width: 200px; 
   height: 320px;
   object-fit: cover;
@@ -70,24 +74,44 @@ export default {
 .text-content {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   width: 70%;
   padding-left: 80px;
+  font-size: 1.2rem;
 }
 
-.about-introduction, .about-text {
+.about-text {
   margin-bottom: 20px; 
 }
 
-.about-introduction {
-    font-weight: bold;
-  }
+.links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.links h5 {
+  margin-bottom: 10px;
+}
+
+.links p {
+  padding: 0 20px;
+}
+
+.links .mail {
+  padding-left: 0;
+}
+
+.links img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 744px) {
   .about-page {
     flex-direction: column;
     align-items: center;
-    /* padding: 40px 20px; */
+    padding-top: 40px;
   }
 
   .content-container {
@@ -119,12 +143,20 @@ export default {
     text-align: left;
     display: flex;
     justify-content: center;
+    font-size: 1rem;
   }
 
-  .about-introduction, .about-text {
+  .about-text {
     margin-top: 10px;
     width: 100%;
     padding: 0 40px;
+  }
+
+  .links {
+    margin: 20px 0 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

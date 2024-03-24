@@ -20,7 +20,7 @@ export default {
     HomePage,
     ProjectsSection,
     AboutMeSection
-}
+  }
 }
 
 </script>
@@ -33,7 +33,9 @@ export default {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   background-color: #F6FBFB;
 }
 
@@ -46,10 +48,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('./assets/white-flowers.jpg');
+    /* background-image: url('./assets/white-flowers.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.1; 
+    opacity: 0.1;  */
     z-index: -1; 
   }
 
@@ -57,7 +59,6 @@ body {
     position: relative; 
     height: 100vh;
   }
-
 }
 
 </style>
