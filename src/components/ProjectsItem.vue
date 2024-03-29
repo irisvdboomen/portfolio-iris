@@ -66,6 +66,21 @@ export default {
     background-color: #7EC8E3;
   }
 
+  .tag-Geospatial-Analysis {
+    background-color: #3C8D6D;
+    color: white;
+  }
+
+  .tag-NLP {
+  background-color: #9B72AA;
+  color: white;
+  }
+
+  .tag-AI-applications {
+  background-color: #4DAAA7;
+  color: white;
+}
+
   .text-content h3, .text-content p {
     margin-bottom: 10px;
     width: 400px;
