@@ -3,16 +3,16 @@
     <h2 class="about">About</h2>
     <div class="content-container">
       <div class="profile-image">
-      <img src="/img/me.jpeg" alt=""></div>
+      <img src="/img/me.JPG" alt=""></div>
       <div class="text-content">
         <div class="about-text">
-          My name is Iris, and I am exploring the fields of Front-End Development and Artificial Intelligence as an ICT student. My education in ICT & Media Design has not only equipped me with a comprehensive understanding of essential web technologies like HTML, CSS, JavaScript, Vue, and React, but also enabled me to develop dynamic, intuitive, and accessible user interfaces. This solid foundation allows me to create engaging and user-friendly digital experiences.
+          Hi, I'm Iris, an ICT student interested in Front-End Development and Artificial Intelligence. My studies in ICT & Media Design have really helped me get a good grip on key web technologies like HTML, CSS, JavaScript, Vue, and React, which I use to build easy-to-use and engaging websites.
         </div>
         <div class="about-text">
-          Besides my affinity for front-end design, I'm deeply interested by the analytical and predictive capabilities of AI, which is why I decided to specialize in AI within my studies. Here, I engage with Python, data visualization, deep learning, and other innovative tools to creatively tackle complex challenges. This unique blend of front-end development and AI fuels my ambition to develop solutions that are not just innovative but also focused on user needs.
+          I've also gotten into AI, drawn by how it can analyze and predict things in ways that really fascinate me. That's why I chose to specialize in it, learning about Python, data visualization, and deep learning to creatively solve tough problems.
         </div>
         <div class="about-text">
-          My ultimate goal is to blend the precision and capabilities of AI with the creative and user-centric approach of front-end design. I am committed to contributing to the creation of advanced, meaningful, and accessible technology, focusing on crafting user-focused solutions that address real-world challenges. As someone who is always eager to learn and grow, I look forward to expanding my knowledge and skills in ICT.
+          I'm particularly interested in working with front-end tech, data analysis, or data science because I love making things that are not only cool but also really useful for people. I'm always up for learning more and taking on new challenges, hoping to push the boundaries of what I can create with my skills.
         </div>
           <div class="links">
             <p class="mail"><a href="mailto:iris_v.d.boomen@hotmail.com"><img src="img/mail.png" alt=""></a></p>
@@ -48,7 +48,6 @@ export default {
 
 .content-container {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   flex-direction: row-reverse;
@@ -62,9 +61,9 @@ export default {
 }
 
 .profile-image img {
-  /* border-radius: 10px; */
-  width: 200px; 
-  height: 320px;
+  border-radius: 10px;
+  width: 250px; 
+  height: 400px;
   object-fit: cover;
   background-size: cover; 
   background-position: center;

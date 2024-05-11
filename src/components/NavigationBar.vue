@@ -44,6 +44,7 @@ export default {
   height: 80px;
   background-color: #F6FBFB;
   align-items: center;
+  z-index: 10;
 }
 
 .nav-item {

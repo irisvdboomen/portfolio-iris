@@ -23,7 +23,7 @@ export default {
     width: 400px; 
     height: 250px;
     border-radius: 10px;
-    margin: 20px 0 10px 0; 
+    margin: 40px 0 20px 0; 
     cursor: pointer;
     background-size: cover;
     background-position: center;
@@ -79,6 +79,16 @@ export default {
   .tag-AI-applications {
   background-color: #4DAAA7;
   color: white;
+}
+
+.tag-JavaScript {
+  background-color: #F0DB4F;
+  color: black;
+}
+
+.tag-Frontend {
+  background-color: #43c24c;
+  color: black;
 }
 
   .text-content h3, .text-content p {

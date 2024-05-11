@@ -1,10 +1,9 @@
 <template>
     <div class="introduction-home">
       <div class="introduction-text">
-        <h1>Hello, I'm Iris van den Boomen</h1>
-    
-        <p>I am a passionate front-end developer and AI enthusiast. I am focused on enhancing user experiences through front-end development and exploring the integration of intelligent solutions. Discover my selected projects that highlight my journey in front-end innovation and AI application.</p>
+        <h1>Hello, I'm <span class="name">Iris van den Boomen</span></h1>
         </div>
+        <p class="introduction-text-mobile">Scroll down or use the navigation to check some of my projects or read more about me.</p>
         <div class="introduction-image">
           <img :src="require('@/assets/white-flowers.jpg')" alt="White flowers">
         </div>
@@ -23,25 +22,30 @@ export default {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   }
 
 .introduction-home h1 {
-  font-size: 3rem;
-  margin-bottom: 140px;
-}
-
-.introduction-home p {
-  font-size: 1.2rem;
+  font-size: 6rem;
+  margin-top: 200px;
+  font-weight: 600;
 }
 
 .introduction-text {
-  width: 50vw;
+  width: 60vw;
   padding: 0 50px;
 }
 
+.introduction-text-mobile {
+  display: none;
+}
+
+span.name {
+  font-style: italic;
+}
+
 .introduction-image {
-  width: 50vw;
+  width: 40vw;
   height: 100%;
   display: flex;
   justify-content: end;
@@ -49,7 +53,7 @@ export default {
 }
 
 .introduction-image img {
-  width: 80%;
+  width: 100%;
   height: 597px;
   object-fit: cover;
 }
@@ -70,14 +74,16 @@ export default {
     font-size: 2rem;
   }
 
-  .introduction-home p {
-    margin-top: 10px;
-    font-size: 1.25rem;
-  }
-
   .introduction-text {
     width: 100%;
     padding: 0;
+  }
+
+  .introduction-text-mobile {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .introduction-image {
