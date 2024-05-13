@@ -29,6 +29,7 @@ export default {
   font-size: 6rem;
   margin-top: 200px;
   font-weight: 600;
+  animation: slideIn 0.8s ease-out forwards;
 }
 
 .introduction-text {
@@ -90,4 +91,15 @@ span.name {
     display: none;
   }
 }
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 </style>

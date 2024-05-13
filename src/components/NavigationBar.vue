@@ -1,9 +1,15 @@
 <template>
     <nav class="nav-bar">
       <ul class="nav-item" :class="{ 'show': menuOpen }">
-        <li @click="scrollToSection('home')">Home</li>
-        <li @click="scrollToSection('projects')">Projects</li> 
-        <li @click="scrollToSection('about')">About</li>
+        <li @click="scrollToSection('home')" :class="{ 'active': activeSection === 'home' }">
+          <p>Home</p>
+        </li>
+        <li @click="scrollToSection('projects')" :class="{ 'active': activeSection === 'projects' }">
+          <p>Projects</p>
+        </li>
+        <li @click="scrollToSection('about')" :class="{ 'active': activeSection === 'about' }">
+          <p>About</p>
+        </li>
       </ul>
       <div class="hamburger" @click="toggleMenu">
         <div :class="['line', 'line1', { 'rotate45': menuOpen }]"></div>
@@ -18,7 +24,8 @@ export default {
   name: 'NavigationBar',
   data() {
     return {
-      menuOpen: false
+      menuOpen: false,
+      activeSection: '' // This will keep track of the active section
     };
   },
   methods: {
@@ -26,15 +33,15 @@ export default {
       this.menuOpen = !this.menuOpen;
     },
     scrollToSection(sectionId) {
+      this.activeSection = sectionId; // Update the active section
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'auto', block: 'start' });
       }
-      this.toggleMenu(); 
+      this.toggleMenu();
     }
   }
 }
-
 </script>
 
 <style scoped>
@@ -59,6 +66,12 @@ export default {
 .nav-item li {
   padding: 0 20px;
   cursor: pointer;
+  transition: border-bottom 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+.nav-item li.active p {
+  font-weight: bold;
+  border-bottom: 2px solid #333; /* Example of an underline effect */
 }
 
 .nav-item li:hover {
